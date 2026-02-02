@@ -5,11 +5,15 @@ on:
     tags:
       - 'v*'
 
-permissions: {}
+permissions:
+  checks: write
+  contents: write
+  packages: read
+  
 jobs:
   deploy:
     permissions:
-      contents: write # for release creation (svenstaro/upload-release-action)
+      contents: write #forreleasecreation(svenstaro/upload-release-action)
 
     runs-on: ubuntu-latest
 
